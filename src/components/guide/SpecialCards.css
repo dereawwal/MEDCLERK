@@ -1,0 +1,83 @@
+.special-card {
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid transparent;
+  box-shadow: var(--shadow-sm);
+}
+
+.red-flags-card {
+  background-color: rgba(225, 29, 72, 0.04);
+  border-color: var(--color-accent-red);
+  box-shadow: 0 0 12px rgba(225, 29, 72, 0.06);
+  animation: borderPulse 3s infinite alternate;
+}
+
+.osce-tips-card {
+  background-color: rgba(13, 148, 136, 0.05);
+  border-color: var(--color-accent-teal);
+}
+
+@keyframes borderPulse {
+  0% {
+    border-color: rgba(225, 29, 72, 0.45);
+    box-shadow: 0 0 8px rgba(225, 29, 72, 0.06);
+  }
+  100% {
+    border-color: var(--color-accent-red);
+    box-shadow: 0 0 16px rgba(225, 29, 72, 0.14);
+  }
+}
+
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.header-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.red-icon {
+  color: var(--color-accent-red);
+}
+
+.red-title {
+  color: var(--color-accent-red);
+}
+
+.teal-icon {
+  color: var(--color-accent-teal);
+}
+
+.teal-title {
+  color: var(--color-accent-teal);
+}
+
+.special-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.list-numbered {
+  list-style-type: decimal;
+}
+
+.list-numbered .special-item {
+  list-style-type: decimal;
+}
+
+.special-item {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  list-style-type: disc;
+}

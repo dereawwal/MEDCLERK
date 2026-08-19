@@ -1,0 +1,368 @@
+.master-guide-page {
+  min-height: 100vh;
+  background: transparent;
+  padding-bottom: 5rem;
+}
+
+/* Header */
+.mgp-header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.mgp-back-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.mgp-back-btn:hover {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-hover);
+  border-color: rgba(15, 23, 42, 0.15);
+}
+
+/* Title Block */
+.mgp-title-block {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mgp-title-icon {
+  color: var(--color-accent-teal);
+}
+
+.mgp-main-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.mgp-main-subtitle {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 700px;
+}
+
+/* Sections */
+.mgp-section {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 1.5rem 2rem;
+}
+
+.mgp-section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Card */
+.mgp-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.mgp-card-heading {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 1.25rem 0;
+  color: var(--color-text-primary);
+}
+
+.mgp-card-heading.teal {
+  color: var(--color-accent-teal);
+}
+
+/* Structure List */
+.mgp-structure-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mgp-structure-list > li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-border);
+}
+
+.mgp-item-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.mgp-item-title.teal { color: var(--color-accent-teal); }
+.mgp-item-title.red { color: var(--color-accent-red); }
+
+.mgp-sub-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.mgp-sub-list li {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.mgp-sub-list li::before {
+  content: '◦';
+  position: absolute;
+  left: 0;
+  color: var(--color-text-secondary);
+  opacity: 0.5;
+}
+
+/* Callout Boxes */
+.mgp-callout {
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  border-left: 3px solid transparent;
+}
+
+.ward-callout {
+  background-color: rgba(37, 99, 235, 0.05);
+  border-color: var(--color-accent-blue);
+}
+
+.osce-callout {
+  background-color: rgba(13, 148, 136, 0.05);
+  border-color: var(--color-accent-teal);
+}
+
+.mgp-callout-header {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 1rem;
+}
+
+.callout-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.callout-title.blue { color: var(--color-accent-blue); }
+.callout-title.green { color: var(--color-accent-teal); }
+.callout-icon.blue { color: var(--color-accent-blue); }
+.callout-icon.green { color: var(--color-accent-teal); }
+
+.mgp-callout-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.mgp-callout-list li {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.mgp-callout-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+}
+
+.ward-callout .mgp-callout-list li::before { color: var(--color-accent-blue); }
+.osce-callout .mgp-callout-list li::before { color: var(--color-accent-teal); }
+
+@media (max-width: 768px) {
+  .mgp-title-block { padding: 2rem 1rem 1.5rem; }
+  .mgp-section { padding: 0 1rem 2rem; }
+  .mgp-main-title { font-size: 1.5rem; }
+}
+
+/* ── SECTION 2: PDF ── */
+.mgp-pdf-intro {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.mgp-disease-list-card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.mgp-disease-list-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-secondary);
+  margin: 0 0 1rem 0;
+}
+
+.mgp-disease-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.mgp-disease-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.disease-check-icon {
+  color: var(--color-accent-teal);
+  flex-shrink: 0;
+}
+
+.mgp-download-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1rem 2rem;
+  background-color: var(--color-accent-teal);
+  color: white;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 20px rgba(13, 148, 136, 0.25);
+}
+
+.mgp-download-btn:hover {
+  background-color: var(--color-accent-teal-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(13, 148, 136, 0.4);
+}
+
+/* Empty State */
+.mgp-empty-state {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.empty-icon {
+  color: var(--color-text-secondary);
+  opacity: 0.4;
+  margin-bottom: 0.5rem;
+}
+
+.empty-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.empty-text {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 400px;
+}
+
+.mgp-go-dashboard-btn {
+  margin-top: 0.75rem;
+  padding: 0.6rem 1.5rem;
+  background-color: rgba(13, 148, 136, 0.1);
+  color: var(--color-accent-teal);
+  border: 1px solid rgba(13, 148, 136, 0.25);
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.mgp-go-dashboard-btn:hover {
+  background-color: var(--color-accent-teal);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .mgp-card {
+    padding: 1.25rem;
+  }
+  
+  .mgp-callout {
+    padding: 1.25rem 1rem;
+  }
+  
+  .mgp-disease-list-card {
+    padding: 1.25rem 1rem;
+  }
+  
+  .mgp-empty-state {
+    padding: 2.25rem 1.25rem;
+  }
+  
+  .mgp-download-btn {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
